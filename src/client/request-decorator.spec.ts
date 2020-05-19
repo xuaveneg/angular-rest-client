@@ -130,21 +130,4 @@ describe('Request decorators', (): void => {
       done();
     }
   });
-
-  it('should not have GET method in class not extending RestClientService', (done: DoneFn): void => {
-    try {
-      class InvalidClientMockImplementation {
-        @GET('/getUrl')
-        public getCall(): Observable<void> {
-          return new Observable<void>();
-        }
-      }
-      done.fail();
-      const invalidClientMock: InvalidClientMockImplementation = new InvalidClientMockImplementation();
-      invalidClientMock.getCall();
-    } catch (exception) {
-      expect(exception.message).toBe('Class InvalidClientMockImplementation should extend RestClientService');
-      done();
-    }
-  });
 });

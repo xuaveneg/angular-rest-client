@@ -33,9 +33,9 @@
     "zone.js": "~0.10.2"
   },
   "scripts": {
-    "test": "./node_modules/.bin/karma start",
-    "build": "./node_modules/.bin/tsc",
-    "clean": "./node_modules/.bin/rimraf dist",
+    "test": "ng test",
+    "build": "tsc",
+    "clean": "rimraf dist",
     "prepare": "npm run build"
   },
   "repository": {
