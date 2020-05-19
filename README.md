@@ -36,6 +36,14 @@ class RestClient extends RestClientService {
 }
 ```
 
+You also need to import `RestClientModule` in main project in order to provider `HttpClient`.
+
+As `RestClientModule` does not have its own mocking module, testing and mocking this module goes through `HttpClientTestingModule`.
+
+See https://angular.io/guide/http#testing-requests
+
+See https://medium.com/better-programming/testing-http-requests-in-angular-with-httpclienttestingmodule-3880ceac74cf
+
 ## Informations
 
 `@RestClient` is mandatory (to add `HttpClient` to the class)
