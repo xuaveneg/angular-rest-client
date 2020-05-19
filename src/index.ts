@@ -1,3 +1,5 @@
+import {NgModule} from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 import {RestClientService as _RestClientService} from './client/rest-client-service';
 import {RestClient as _RestClient} from './client/rest-client.decorator';
 import {
@@ -33,3 +35,9 @@ export const PUT: (url: string) => (target: _RestClientService, methodName: Meth
     = _PUT;
 export const DELETE: (url: string) => (target: _RestClientService, methodName: MethodName, descriptor: PropertyDescriptor) => void
     = _DELETE;
+
+@NgModule({
+    declarations: [],
+    imports: [HttpClientModule]
+})
+export class RestClientModule { }
