@@ -10,19 +10,19 @@ function request(method: HttpMethod, url: string, target: RestClientService, met
     };
 }
 
-export function GET(url: string): any {
+export function GET(url: string): (target: RestClientService, methodName: MethodName, descriptor: PropertyDescriptor) => void {
     return (target: RestClientService, methodName: MethodName, descriptor: PropertyDescriptor): void => {
         request(HttpMethod.GET, url, target, methodName, descriptor);
     };
 }
 
-export function POST(url: string): any {
+export function POST(url: string): (target: RestClientService, methodName: MethodName, descriptor: PropertyDescriptor) => void {
     return (target: RestClientService, methodName: MethodName, descriptor: PropertyDescriptor): void => {
         request(HttpMethod.POST, url, target, methodName, descriptor);
     };
 }
 
-export function PUT(url: string): any {
+export function PUT(url: string): (target: RestClientService, methodName: MethodName, descriptor: PropertyDescriptor) => void {
     return (target: RestClientService, methodName: MethodName, descriptor: PropertyDescriptor): void => {
         request(HttpMethod.PUT, url, target, methodName, descriptor);
     };

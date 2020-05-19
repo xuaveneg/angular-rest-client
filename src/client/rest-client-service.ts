@@ -1,7 +1,7 @@
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {throwRestClientAnnotationError} from './client-decorator-validator';
-import {HttpMethod, MethodName} from './client-types';
-import {ParamMap, ParamType} from './maps/param-map';
+import {HttpMethod, MethodName, ParamType} from './client-types';
+import {ParamMap} from './maps/param-map';
 
 export class RestClientService {
   protected basePath: string;

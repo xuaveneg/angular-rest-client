@@ -1,5 +1,4 @@
-import {MethodName} from '../client-types';
-import {MultipleParamMap} from './param-map';
+import {MethodName, MultipleParamMap} from '../client-types';
 
 export abstract class MethodParamMap {
   protected internalMap: Map<MethodName, MultipleParamMap> = new Map<MethodName, MultipleParamMap>();

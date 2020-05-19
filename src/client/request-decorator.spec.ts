@@ -3,7 +3,6 @@ import {TestBed} from '@angular/core/testing';
 import {Observable} from 'rxjs';
 import {RestClientService} from './rest-client-service';
 import {RestClient} from './rest-client.decorator';
-import {Body, Header, PathParam, QueryParam} from './parameters-decorator';
 import {DELETE, GET, POST, PUT} from './request-decorator';
 
 type TestType = { test: string };

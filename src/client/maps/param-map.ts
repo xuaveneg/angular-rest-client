@@ -2,15 +2,7 @@ import {MethodParamMap} from './method-param-map';
 import {SingleParamByMethodMap} from './single-param-by-method-map';
 import {MultipleParamByMethodSingleValueMap} from './multiple-param-by-method-single-value-map';
 import {MultipleParamByMethodMultipleValueMap} from './multiple-param-by-method-multiple-value-map';
-import {MethodName} from '../client-types';
-
-export type MultipleParamMap = Map<string, number[]>;
-
-export enum ParamType {
-  PATH,
-  QUERY,
-  HEADER
-}
+import {MethodName, ParamType} from '../client-types';
 
 export class ParamMap {
   private paramTypeMap: Map<ParamType, MethodParamMap> = new Map<ParamType, MethodParamMap>();
