@@ -14,8 +14,6 @@ export class SingleParamByMethodMap {
 
     public get(methodName: MethodName, args: any[]): any {
         const methodIndex: number = this.internalMap.get(methodName);
-        if (args[methodIndex]) {
-            return args[methodIndex];
-        }
+        return args[methodIndex];
     }
 }

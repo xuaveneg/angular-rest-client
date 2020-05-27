@@ -12,7 +12,6 @@ export class ParamMap {
     this.paramTypeMap.set(ParamType.PATH, new MultipleParamByMethodSingleValueMap('Path param'));
     this.paramTypeMap.set(ParamType.QUERY, new MultipleParamByMethodMultipleValueMap());
     this.paramTypeMap.set(ParamType.HEADER, new MultipleParamByMethodMultipleValueMap());
-    this.bodies = new SingleParamByMethodMap('Body');
   }
 
   public addBody(methodName: MethodName, parameterIndex: number): void {

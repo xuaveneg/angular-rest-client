@@ -1,10 +1,8 @@
 import {Observable} from 'rxjs';
-import {checkBaseClass} from './client-decorator-validator';
 import {HttpMethod, MethodName} from './client-types';
 import {RestClientService} from './rest-client-service';
 
 function request(method: HttpMethod, url: string, target: RestClientService, methodName: string, descriptor: PropertyDescriptor): void {
-    checkBaseClass(target);
     descriptor.value = function(...args: any[]): Observable<any> {
         return this.executeRequest(method, url, methodName, args);
     };
