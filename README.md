@@ -70,3 +70,11 @@ Endpoints can be parameterized with the following annotations
  be `?name=value1&name=value2`)
  - `@Header('name')` defines the header `name`, there can be any number for a name in a method (there can be
  `name: value1, value2`)
+ 
+## `npm` commands
+
+- `test` launch tests with code coverage
+- `build` build javascript sources from typescript in `dist` folder
+- `clean` deletes reporting, coverage and build folders
+- `mutate` launch mutation testing with `stryker`
+- `prepare` same as `build`
